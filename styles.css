@@ -1,0 +1,119 @@
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --accent-color: #007BFF;
+}
+/* SARVIN */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+h1 h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: '150px';
+    gap: 15px;
+    padding: auto;
+}
+.grid-item {
+    background-color: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.grid-item.tall {
+    background-color: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    grid-row: span 2;
+}
+.grid-item.wide {
+    background-color: linear-gradient(135deg, #a1c4fd 0%, #0f232c 100%);
+    grid-column: span 2;
+}
+.grid-item.big {
+    background-color: linear-gradient(135deg, #a1c4fd 0%, #04740e 100%);
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.grid-container2 {
+    display: grid;
+    grid-template-areas: "header header""navigation main""sidebar main""footer footer";
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+    padding: 10px;
+    min-height: 100vh;
+}
+.header {
+    grid-area: header;
+    background-color: lightgreen;
+    color: grey;
+    padding: 20px;
+    text-align: center;
+}
+.nav {
+    grid-area: navigation;
+    background-color: yellow;
+    padding: 20px;
+}
+.main {
+    grid-area: main;
+    background-color: #c09797;
+    padding: 20px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: magenta;
+    padding: 20px;
+}
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header, .nav, .main, .sidebar, .footer {
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}   
+.grid-gallery figure {
+    margin: 0;
+    background: #111826 ;
+    border: 1px solid #ccc;
+    border-radius: 8rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.grid-gallery img {
+   width: 100%;
+   background: linear-gradient( 135deg, #667eea 0%, #764ba2 100%); ;
+   display: block;
+}
+.grid-gallery figcaption {
+    padding: 0.5rem 0.75rem;     
+    color: #a4b1c3;
+}
